@@ -1,0 +1,11 @@
+services:
+    pictureserver:
+        build: ..
+        image: pictureserver:dev
+        volumes:
+            - ../:/pictureserver
+        environment:
+            - PYTHONDONTWRITEBYTECODE=1
+            - PYTHONUNBUFFERED=1
+        ports:
+            - 8000:8000
